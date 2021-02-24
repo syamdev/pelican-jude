@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block meta_og %}
+	<meta property="og:title" content="Contact - {{ SITENAME|striptags|e }}"/>
+	<meta name="twitter:title" content="Contact - {{ SITENAME|striptags|e }}"/>
+	<meta property="og:url" content="{{ SITEURL }}/contact.html" />
+	<meta property="og:description" content="Contact Page - {{ SITEDESCRIPTION|e }}" />
+	<meta name="twitter:description" content="Contact Page - {{ SITEDESCRIPTION|e }}">
+	<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
+	<meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" />
+	<meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" >
+{% endblock meta_og %}
+
+{% block head %}
+{{ super() }}
+	<meta name="robots" content="noindex" />
+{% endblock %}
+
+{% block banner_title %}
+						<h2 class="mb-5" style="color: #ffffff;">{{ SITETITLE }}</h2>
+{% endblock %}
+{% block banner_cta %}
+						<p><a href="#start" class="btn btn-white btn-outline-white">Get Detail</a></p>
+{% endblock %}
+
+{% block content %}
+    <div id="start" class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+
+	<section>
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8 mb-5">
+					<h1 class="text-center">Contact</h1>
+					<br>
+					<p class="text-justify">Have any question, comment, suggestion or news tip to pass along to {{ SITENAME }}?</p>
+					<p class="text-justify">We are open to discuss all of the possibilities with you. This page offering the right way to sent any comments to domainname admin related to your feedback, news coverage and other issues related to this site.</p>
+					<p>We are happy to hear information from you please write a subject format:</p>
+					<ul>
+					<li><strong>Claim Picture</strong>&nbsp;[picture name] [url to real picture] : if you are the real owner to claim your picture and need back links.</li>
+					<li><strong>Submit Wallpapers</strong>&nbsp;[wallpaper name] : if you wanna submit your or your wallpaper design to us.</li>
+					<li><strong>Advertise</strong>&nbsp;: if you interested to advertising on our site.</li>
+					<li><strong>Support</strong> : if you need our support.</li>
+					</ul>
+					<p>And send all your inquiries to our official mail at contact@domainname</p>
+					<p class="text-justify">Don’t hesitate to contact us according your concerns and don’t worry, all of your comment are welcome. :) </p>
+					<p class="text-justify">Thank you.</p>
+
+				</div>
+
+			</div>
+		</div><!-- end container -->
+	</section>
+
+    <div class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+{% endblock %}

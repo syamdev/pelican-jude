@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	{% block head %}
+	<title>{% block title %}{{ SITENAME }}{% endblock title %}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}</title>
+	<meta name="description" content="{% block meta_description %}{{ SITEDESCRIPTION }}{% endblock meta_description %}">
+	<meta name="keywords" content="{% block meta_keywords %}{{ SITEKEYWORDS }}{% endblock meta_keywords %}">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/animate.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/fonts/ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/fonts/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/fonts/flaticons/font/flaticon.css">
+
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-32.png" sizes="32x32">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-144.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-72.png">
+	<link rel="apple-touch-icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-57.png">
+
+	{% block meta_og %}
+	<meta property="og:title" content="{{ SITENAME|striptags|e }}"/>
+	<meta name="twitter:title" content="{{ SITENAME|striptags|e }}"/>
+	<meta property="og:url" content="{{ SITEURL }}" />
+	<meta property="og:description" content="{{ SITEDESCRIPTION|e }}" />
+	<meta name="twitter:description" content="{{ SITEDESCRIPTION|e }}">
+	<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
+	<meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" />
+	<meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" >
+	{% endblock meta_og %}
+
+	{% endblock head %}
+</head>
+
+<body>
+
+	<header role="banner">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsHeader" aria-controls="navbarsHeader" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsHeader">
+					<ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+						<li class="nav-item">
+							<a class="nav-link" href="{{ SITEURL }}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ SITEURL }}#recipes">Recipes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ SITEURL }}#recommendations">Recommendations</a>
+						</li>
+					</ul>
+				</div>
+
+			</div><!-- end container -->
+		</nav>
+	</header>
+	<!-- END header -->
+
+    <section class="home-slider-loop-false  owl-carousel">
+		<div class="slider-item" style="background-image: url('{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/hero_1.jpg');">
+
+			<div class="container">
+				<div class="row slider-text align-items-center justify-content-center">
+					<div class="col-md-8 text-center col-sm-12 element-animate">
+                       {% block banner_title %}
+						<h1>{{ SITETITLE }}</h1>
+						<p class="mb-5" style="color: #ffffff;">{{ SITESUBTITLE }}</p>
+                       {% endblock %}
+                       {% block banner_cta %}
+						<p><a href="#start" class="btn btn-white btn-outline-white">Get Started</a></p>
+                       {% endblock %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+    </section>
+
+	{% block content %}{% endblock %}
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="container">
+
+			<div class="row mb-3">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="text-center">
+						<h3>{{ SITENAME }}</h3>
+						<br>
+						<a href="{{ SITEURL }}">Home</a> | <a href="{{ SITEURL }}/contact.html">Contact</a> | <a href="{{ SITEURL }}/copyright.html">Copyright</a> | <a href="{{ SITEURL }}/dmca.html">DMCA</a> | <a href="{{ SITEURL }}/privacy-policy.html">Privacy Policy</a>
+						<br>
+						<br>
+						<ul class="list-unstyled footer-link d-flex justify-content-center footer-social">
+							<li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+							<li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+						</ul>
+					</div><!-- end footer-text -->
+				</div><!-- end col -->
+			</div>
+
+			<div class="row">
+				<div class="col-12 text-md-center text-left">
+					<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved. <a href="{{ SITEURL }}" target="_blank" >{{ SITENAME }}</a>. | Designed by <a href="https://www.webitu.com" target="_blank" >Webitu</a></p>
+				</div>
+			</div>
+
+		</div>
+    </footer>
+    <!-- END footer -->
+
+    <a id="gotop" title="Scroll to top" href="#">&#10148;</a>
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#cf1d16"/></svg></div>
+
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery-3.2.1.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/popper.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/owl.carousel.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.waypoints.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/magnific-popup-options.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+</body>
+</html>

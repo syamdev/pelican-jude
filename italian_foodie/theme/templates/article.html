@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block banner_title %}
+	<h2 class="mb-5" style="color: #ffffff;">{{ SITETITLE }}</h2>
+{% endblock %}
+{% block banner_cta %}
+	<p><a href="#start" class="btn btn-white btn-outline-white">Get Recipe</a></p>
+{% endblock %}
+
+{% block content %}
+    <div id="start" class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+
+	<section>
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8 mb-5">
+					<h1 class="mb-5">{{ article.title }}</h1>
+					<div class="bg-image img-hover-zoom mb-3">
+						<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/hero_1.jpg" alt="Special Recipe">
+					</div>
+					<p>
+						Vous pouvez avoir Ma ratatouille provençale ✮✮✮✮✮ en utilisant 11 ingrédients et 6 étapes. 😇 Voici comment vous cuisinez Ma ratatouille provençale.↓↓↓
+					</p>
+
+					<h3>Ingrédients du Ma ratatouille provençale</h3>
+
+					<ol>
+
+							<li>Vous avez besoin 2 of aubergines pas trop grosses. </li>
+
+							<li>Vous avez besoin 2 of petites courgettes. </li>
+
+							<li>C'est 1 of poivron rouge. </li>
+
+							<li>Vous avez besoin 1 of oignon rouge. </li>
+
+							<li>Vous avez besoin 1 of grosse gousse d’ail. </li>
+
+							<li>Vous avez besoin 1 cuillère à soupe of concentré de tomate. </li>
+
+							<li>Préparez  of Quelques olives noires dénoyautées. </li>
+
+							<li>Préparez 5 of branches de thym. </li>
+
+							<li>Préparez 3 of feuilles de laurier. </li>
+
+							<li>Vous avez besoin  of Sel. </li>
+
+							<li>Préparez  of Piment d’Espelette. </li>
+
+					</ol>
+
+					<h3>Ma ratatouille provençale étape par étape</h3>
+
+					<ol>
+							<li>
+								Laver les aubergines, les courgettes et le poivron et éplucher l’oignon.
+							</li>
+							<li>
+								Couper tous les légumes en petits cubes et les reserver séparément.
+							</li>
+							<li>
+								Dans une cocotte ou un wok faire revenir à feu vif séparément et dans l’ordre dans de l’huile d’olive (en rajouter entre chaque cuisson) l’oignon puis le poivron, les courgettes pour finir par les aubergines. (Entre chaque cuisson reserver le légume dans son plat de départ).
+							</li>
+							<li>
+								Une fois les aubergines revenues, y ajouter les courgettes, le poivron et l’oignon, la cuillère de concentré de tomate, le thym et le laurier, saler et assaisonner au piment d’Espelette et laisser cuire à feu doux pendant 30 mns en remuant délicatement de temps en temps.
+							</li>
+							<li>
+								Égoutter la ratatouille dans une passoire étamine et retirer le thym et le laurier..
+							</li>
+							<li>
+								Remettre la ratatouille égouttée dans la cocotte, ajouter quelques olives noires émincées. Rectifier l’assaisonnement et cuire encore 5 à 10 mns à feu doux..
+							</li>
+					</ol>
+
+					<p>
+					😋😊😁
+					</p>
+
+				</div>
+
+			</div>
+		</div><!-- end container -->
+	</section>
+
+    <div class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+{% endblock %}

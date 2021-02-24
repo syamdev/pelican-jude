@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block meta_og %}
+	<meta property="og:title" content="404: Page Not Found - {{ SITENAME|striptags|e }}"/>
+	<meta name="twitter:title" content="404: Page Not Found - {{ SITENAME|striptags|e }}"/>
+	<meta property="og:url" content="{{ SITEURL }}/404.html" />
+	<meta property="og:description" content="404: Page Not Found - {{ SITEDESCRIPTION|e }}" />
+	<meta name="twitter:description" content="404: Page Not Found - {{ SITEDESCRIPTION|e }}">
+	<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
+	<meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" />
+	<meta name="twitter:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/chilli-152.png" >
+{% endblock meta_og %}
+
+{% block head %}
+{{ super() }}
+	<meta name="robots" content="noindex" />
+{% endblock %}
+
+{% block banner_title %}
+	<h2 class="mb-5" style="color: #ffffff;">{{ SITETITLE }}</h2>
+{% endblock %}
+{% block banner_cta %}
+	<p><a href="#start" class="btn btn-white btn-outline-white">Get Detail</a></p>
+{% endblock %}
+
+{% block content %}
+    <div id="start" class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+
+	<section>
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8 mb-5">
+                    <h1 class="text-center">404: Page Not Found</h1>
+                    <br>
+                    <p class="text-center">The page you requested doesn't exist, go back to previous page or our <a href="index.html" style="color: red;">Home Page</a>.</p>
+
+				</div>
+
+			</div>
+		</div><!-- end container -->
+	</section>
+
+    <div class="element-animate">
+		<div class="container">
+			<div class="col-lg-12">
+				<div class="banner-spot clearfix">
+					<div class="banner-img">
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+						<div class="adbox">
+							{% include 'ads300.html' %}
+
+						</div>
+					</div><!-- end banner-img -->
+				</div><!-- end banner-spot -->
+			</div><!-- end col -->
+		</div><!-- end container -->
+	</div>
+{% endblock %}
