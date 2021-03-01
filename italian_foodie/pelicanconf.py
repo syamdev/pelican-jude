@@ -39,6 +39,7 @@ RELATIVE_URLS = True
 
 DIRECT_TEMPLATES = ['index', 'contact', 'copyright', 'dmca', 'privacy-policy', '404', 'single']
 TEMPLATE_PAGES = {'recipes.html': 'recipes/index.html',
+                  'recipes-old.html': 'recipes/index-old.html',
                   'single.html': 'recipes/single.html'}
 SITEDESCRIPTION = 'Thousand best favourite Italian food recipes from food lovers'
 SITEKEYWORDS = 'Italian foods, Italian recipes, Italian cuisine, Italian dishes, pasta recipes, pizza recipes'
